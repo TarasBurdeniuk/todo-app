@@ -5,6 +5,7 @@ import {AppLoading} from "expo";
 import NavBar from "./src/components/NavBar";
 import MainScreen from "./src/Screens/MainScreen";
 import TodoScreen from "./src/Screens/TodoScreen";
+import {THEME} from "./src/theme";
 
 const loadApplication = async () => {
     try {
@@ -103,7 +104,7 @@ export default function App() {
 
 const styles = StyleSheet.create({
     container: {
-        paddingHorizontal: 30,
+        paddingHorizontal: THEME.PADDING_HORIZONTAL,
         paddingVertical: 20,
     },
 });
