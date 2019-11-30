@@ -43,7 +43,7 @@ export default function App() {
         const todo = todos.find(item => item.id === id);
         Alert.alert(
             'Removing element',
-            `Are you sure "${todo.title}"?`,
+            `Are you sure remove "${todo.title}"?`,
             [
                 {
                     text: 'Cancel',
