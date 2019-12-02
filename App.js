@@ -4,6 +4,7 @@ import * as Font from 'expo-font';
 import { AppLoading } from 'expo';
 import MainLayout from './src/MainLayout';
 import TodoState from './src/context/todo/TodoState';
+import ScreenState from './src/context/screen/ScreenState';
 
 const loadApplication = async () => {
     try {
@@ -30,8 +31,10 @@ export default function App() {
     }
 
     return (
-        <TodoState>
-            <MainLayout />
-        </TodoState>
+        <ScreenState>
+            <TodoState>
+                <MainLayout />
+            </TodoState>
+        </ScreenState>
     );
 }
