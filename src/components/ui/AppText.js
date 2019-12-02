@@ -1,17 +1,14 @@
 import React from 'react';
-import {Text, StyleSheet} from 'react-native';
+import { Text, StyleSheet } from 'react-native';
 
-const AppText = ({children, style}) => {
-    return (
-        <Text style={{...styles.default, ...style}}>{children}</Text>
-    )
-};
+const AppText = ({ children, style }) => (
+    <Text style={{ ...styles.default, ...style }}>{children}</Text>
+);
 
 const styles = StyleSheet.create({
     default: {
         fontFamily: 'roboto-regular',
     },
 });
-
 
 export default AppText;

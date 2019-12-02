@@ -1,11 +1,9 @@
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
-const AppCard = (props) => {
-    return (
-        <View style={{...styles.default, ...props.style}}>{props.children}</View>
-    )
-};
+const AppCard = ({ style, children }) => (
+    <View style={{ ...styles.default, ...style }}>{children}</View>
+);
 
 const styles = StyleSheet.create({
     default: {
@@ -22,7 +20,7 @@ const styles = StyleSheet.create({
         },
         backgroundColor: '#fff',
         borderRadius: 10,
-        elevation: 8,  // for android
+        elevation: 8, // for android
     },
 });
 

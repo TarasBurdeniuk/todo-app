@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
-import {View, StyleSheet, TextInput, Keyboard, Alert} from 'react-native';
-import {AntDesign} from "@expo/vector-icons";
-import {THEME} from "../theme";
+import React, { useState } from 'react';
+import { View, StyleSheet, TextInput, Keyboard, Alert } from 'react-native';
+import { AntDesign } from '@expo/vector-icons';
+import THEME from '../theme';
 
-const AppTodo = ({onSubmit}) => {
+const AppTodo = ({ onSubmit }) => {
     const [value, setValue] = useState('');
 
     const handlerPress = () => {
@@ -13,9 +13,8 @@ const AppTodo = ({onSubmit}) => {
             Keyboard.dismiss();
         } else {
             setValue('');
-            Alert.alert('Todo is must be fill')
+            Alert.alert('Todo is must be fill');
         }
-
     };
 
     return (
@@ -24,15 +23,15 @@ const AppTodo = ({onSubmit}) => {
                 style={styles.input}
                 onChangeText={setValue}
                 value={value}
-                placeholder='Enter text'
+                placeholder="Enter text"
                 autoCorrect={false}
-                autoCapitalize='words'
+                autoCapitalize="words"
             />
-            <AntDesign.Button onPress={handlerPress} name='pluscircleo'>
+            <AntDesign.Button onPress={handlerPress} name="pluscircleo">
                 Add
             </AntDesign.Button>
         </View>
-    )
+    );
 };
 
 const styles = StyleSheet.create({
