@@ -1,4 +1,5 @@
 import React, { useReducer, useContext } from 'react';
+import { Alert } from 'react-native';
 import TodoContext from './todoContext';
 import todoReducer from './todoReducer';
 import { ADD_TODO, REMOVE_TODO, UPDATE_TODO } from '../types';
@@ -16,8 +17,25 @@ const TodoState = ({ children }) => {
     const addTodo = title => dispatch({ type: ADD_TODO, title });
 
     const removeTodo = id => {
-        changeScreen(null);
-        dispatch({ type: REMOVE_TODO, id });
+        Alert.alert(
+            'Remove todo',
+            'Are you sure to remove todo?',
+            [
+                {
+                    text: 'Cancel',
+                    style: 'cancel',
+                },
+                {
+                    text: 'Remove',
+                    style: 'destructive',
+                    onPress: () => {
+                        changeScreen(null);
+                        dispatch({ type: REMOVE_TODO, id });
+                    },
+                },
+            ],
+            { cancelebel: false },
+        );
     };
 
     const updateTodo = (id, title) => dispatch({ type: UPDATE_TODO, id, title });
