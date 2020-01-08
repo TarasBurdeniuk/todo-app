@@ -11,16 +11,15 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        shadowColor: '#000',
-        shadowRadius: 2,
-        shadowOpacity: 0.3,
-        shadowOffset: {
-            width: 2,
-            height: 2,
-        },
         backgroundColor: '#fff',
-        borderRadius: 10,
-        elevation: 8, // for android
+        shadowColor: '#000',
+        shadowOffset: {
+            width: 0,
+            height: 6,
+        },
+        shadowOpacity: 0.39,
+        shadowRadius: 8.3,
+        elevation: 13,
     },
 });
 
